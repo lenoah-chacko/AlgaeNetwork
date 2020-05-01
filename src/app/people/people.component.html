@@ -1,0 +1,17 @@
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let person of people">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">{{person.name}}</h5>
+                <p class="card-text">{{person.email}}</p>
+                <p class="card-text">Address: {{person.location}}</p>
+                <div id="preview" style="display: inline-block;">
+                    <img *ngIf="person.algaeImage" [src]="'assets/uploads/' + person.algaeImage" alt="algae image" class="img-thumbnail img-responsive">
+                </div>                     
+            <div class="card-footer text-muted">
+                Phone Number: {{person.phoneNum}}
+                <input (click)="deleteClient(person._id)" value="Delete" class="btn btn-outline-danger btn-small mt-3" >
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">Details</h3>
+            </div>
+            <div class="card-body">
+                <form class="needs-validation" id="farm" (submit)="registerData()">
+                    <div class="form-group">
+                        <label for="validationDefault01">Name</label>
+                        <input [(ngModel)]="details_holder.name" name="name" id="validationCustom01" type="text" class="form-control rounded-0" (input)="checkform()" required/>
+                        <div class="invalid-feedback">This is a required field
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationDefault02">Phone Number</label>
+                        <input [(ngModel)]="details_holder.phoneNum" name="phoneNum" id="validationCustom02" type="text" class="form-control rounded-0" (input)="checkform()" required/>
+                        <div class="invalid-feedback">This is a required field
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationDefault03">Email</label>
+                        <input [(ngModel)]="details_holder.email" name="email" id="validationCustom03" type="text" class="form-control rounded-0" (input)="checkform()" required/>
+                        <div class="invalid-feedback">This is a required field
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationDefault04">Address</label>
+                        <input [(ngModel)]="details_holder.location" name="location" id="validationCustom04" type="text" class="form-control rounded-0" (input)="checkform()" required/>
+                        <div class="invalid-feedback">This is a required field
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationDefault05">Image of Algae</label>
+                        <input name="image" id="validationCustom05" class="form-control rounded-0" type="file" (change)="onFileSelected($event)" required/>
+                    </div>
+      <!--              <div class="form-group ml-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required/>
+                          <label class="form-check-label" for="invalidCheck2">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">This is required
+                          </div>
+                        </div>
+                      </div>-->
+                    <div class="text-center">
+                    <input type="submit" id="go" class="btn btn-success mt-2 pt-2 pb-2 pl-5 pr-5"  value="Enter"/>
+                    </div>
+                </form>
+                <div id="alert" class="alert alert-success text-center mt-3" style="display: none;">Your details has been sent!</div>
+            </div>
+        </div>
+    </div>
+</div>
