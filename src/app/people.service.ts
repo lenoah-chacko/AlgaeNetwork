@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PeopleService {
 
-  private _peopleUrl="/api/people/";
+  private _peopleUrl="https://algae-network.herokuapp.com/api/people/";
   constructor(private http: HttpClient) { }
 
   getPeople(){

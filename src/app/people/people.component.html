@@ -6,7 +6,7 @@
                 <p class="card-text">{{person.email}}</p>
                 <p class="card-text">Address: {{person.location}}</p>
                 <div id="preview" style="display: inline-block;">
-                    <img *ngIf="person.algaeImage" [src]="'assets/uploads/' + person.algaeImage" alt="algae image" class="img-thumbnail img-responsive">
+                    <img *ngIf="person.algaeImage" [src]="'https://algae-network.herokuapp.com/uploads/' + person.algaeImage" alt="algae image" class="img-thumbnail img-responsive">
                 </div>                     
             <div class="card-footer text-muted">
                 Phone Number: {{person.phoneNum}}

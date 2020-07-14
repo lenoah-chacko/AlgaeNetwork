@@ -4,12 +4,16 @@ const jwt=require("jsonwebtoken")
 const User=require("../models/user")
 const Client=require("../models/clientdata")
 const mongoose=require("mongoose")
-const peopleData=Client.find({})
 const multer=require("multer")
+const fs=require("fs")
+var dir = './uploads';
 
 const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-      cb(null, './uploads/');
+    destination: function (req, file, callback) {
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir);
+        }
+        callback(null, './uploads');
     },
     filename: function(req, file, cb) {
       cb(null, Date.now() + file.originalname);
@@ -31,7 +35,7 @@ const fileFilter = (req, file, cb) => {
     fileFilter: fileFilter
   });
 const db="mongodb+srv://Raakim:l23456789@cluster-22dky.gcp.mongodb.net/events?retryWrites=true&w=majority"
-
+app.use(express.static('uploads'));
 mongoose.connect(db,err=>{
     if(err){
         console.error("Error! "+err)
