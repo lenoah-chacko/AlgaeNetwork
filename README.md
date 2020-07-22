@@ -7,7 +7,7 @@ It is hosted on Firebase while the backend is hosted on Heroku.
 
 ## Link
 
-algaenetwork.web.app
+https://algaenetwork.web.app/
 
 ## Development server
 
